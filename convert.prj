@@ -1,0 +1,11 @@
+; $Id: convert.prj,v 1.3 2003/12/28 20:47:05 rincewind Exp $
+convert.prg
+.C[-D__ATARIST__]
+=                  ; list of modules follows...
+PCSTART.O          ; startup code
+convert.c
+mslib.lib
+PCSTDLIB.LIB       ; standard library
+PCEXTLIB.LIB       ; extended library
+PCTOSLIB.LIB       ; TOS library
+;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

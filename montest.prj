@@ -1,0 +1,12 @@
+; $Id: montest.prj,v 1.2 2003/12/28 20:42:09 rincewind Exp $
+*.TOS   
+.C[-DMON_TEST=1]
+.L[-G -L -Y]
+=                  ; list of modules follows...
+PCSTART.O          ; startup code
+monitor.c
+;mslib.lib
+PCSTDLIB.LIB       ; standard library
+PCEXTLIB.LIB       ; extended library
+PCTOSLIB.LIB       ; TOS library
+;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

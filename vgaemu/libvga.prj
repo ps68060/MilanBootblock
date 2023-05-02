@@ -1,0 +1,22 @@
+; $Id: libvga.prj,v 1.2 2003/12/28 20:45:28 rincewind Exp $
+LIBVGA.LIB 
+.C[-2 -P -G -D__ATARIST__]
+.S[-4 -S]
+.L[-J]
+=                  ; list of modules follows...
+;VGA.S              ; startup code
+LIBVGA.C           (sysenv.h, x86_bios.h, x86_regs.h, debug.h)
+X86_BIOS.C         (sysenv.h, x86_bios.h, x86_regs.h, pci.h, debug.h)
+SYSENV.C           (sysenv.h, x86_regs.h, pci.h, debug.h) 
+X86_EXEC.S         (X86_REGS.INC) 
+X86_DEC.S          (X86_REGS.INC)
+X86_OPS.S          (X86_REGS.INC, X86_POPS.S, X86_POPS.INC) 
+X86_OP32.S         (X86_REGS.INC, LONG_OPS.S, X86_POPS.INC)
+;X86_POPS.S        ; ber include in X86_OPS
+;DEBUG.C            (debug.h)
+;LL_IO.S            ; serprintf
+PCI.C              (pci.h)
+;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+PCSTDLIB.LIB       ; standard library
+;PCEXTLIB.LIB       ; extended library
+;PCTOSLIB.LIB       ; TOS library

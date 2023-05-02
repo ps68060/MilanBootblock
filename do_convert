@@ -1,0 +1,8 @@
+#!/bin/sh
+mmv "*" "#l1"
+(cd vgaemu; mmv "*" "#l1")
+find . -type f | xargs chmod +rw
+find . -name "*.o" -o -name "*.lst" -o -name "*.prg" -o -name "*.pdb" | xargs rm
+find . -name "*.[chs]" -o -name "*.prj" -o -name "*.txt" -o -name "*.inc" | xargs fromdos
+
+

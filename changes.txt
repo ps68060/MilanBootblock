@@ -1,0 +1,26 @@
+V1.03:
+  - use IRQ 12 for Keyboard to fix "caps-lock hang"
+  
+V1.02:
+  - fix initialization of IDE interrupt for second IDE port
+  - init MB-IRQ for extra UARTs on Board Rev. 2.1
+  - change UART base addresses for Board Rev. 2.1
+  - fix detection of 68LC040 CPU
+ 
+V1.01 13.5.2002:
+  - support Milan V2.1 board: map new config registers, disable watchdog
+    and RS232/RS485 drivers during startup
+  - display board revision during startup
+
+  - new error beep codes:
+    1 short beep - normal startup
+    1 long, 1 short beep:  no SIMM in slot 0
+    1 long, 2 short beeps: wrong type of SIMM in slot 0
+    1 long, 3 short beeps: bad (defective) SIMM in slot 0
+    1 long, 4 short beeps: bus error in bootblock during startup
+  
+V1.00:
+  releasable version with VGA BIOS emulation for non-S3-Trio VGA cards,
+  short beep during memory test. If lower 16MB of memory are bad/missing,
+  no video output will be generated!
+  

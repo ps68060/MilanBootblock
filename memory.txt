@@ -1,0 +1,42 @@
+$Id: memory.txt,v 1.4 2003/12/28 20:41:33 rincewind Exp $
+
+ --- |
+ 60M |         4
+ 56M |         4
+ 52M |         4
+ 48M |         4 
+ 44M |       4 4
+ 40M |       4 4 4
+ 36M |       4 4     <- PAT2
+ 32M |       4 4 4   <- PAT3
+ 28M |         4
+ 24M |         4
+ 20M |         4    
+ 16M |         4     <- PAT4
+ 12M |     4 4 4
+  8M |   4 4 4 4 4   <- PAT1
+  4M |     4 4 4     <- PAT6
+  0M | 4 4 4 4 4 4   <- PAT5
+ --- +---------------------------------------------------------------
+       1 2 3 4 5 6 
+                 
+Regeln:
+ - PAT1 als letztes schreiben, berall aužer an 0MB
+ - PAT2 nach PAT6
+ - PAT2 nach PAT3
+ 
+Schreibreihenfolge:
+ 1. PAT5
+ 2. PAT4
+ 3. PAT6
+ 4. PAT3
+ 5. PAT2
+ 6. PAT1
+
+; Memory Schattenregister, pro 64MB-Seite:
+;  1 = 4MB
+;  2 = 8MB  asymmetrisch
+;  3 = 16MB
+;  4 = 32MB (asymmetrisch: 16MB / 16MB Lcke / 16MB )
+;  5 = 64MB
+;  6 = 16MB (asymmetrisch: 4MB / Lcke / 4MB / Lcke ...)

@@ -1,0 +1,37 @@
+; $Id: bootblk.prj,v 1.12 2003/12/28 21:01:05 rincewind Exp $
+ROM.PRG
+.C[-2 -8 -K]
+.S[-4 -8 -S]
+;.L[-T=$400f0000 -B=$00010000]
+;.L[-T=$00E70000 -B=$00010000]
+;.L[-T=$00300000 -B=$00010000]
+;.L[-T=$00300000 -B=$0700]
+;.L[-T=$00020000 -B=$0700]
+.L[-T=$000A0000 -B=$0700]
+=                  ; list of modules follows...
+ram700.s
+startup.s (regdef.inc)
+ll_io.s	(regdef.inc)
+floppy.s (regdef.inc)
+keyboard.s (regdef.inc)
+cpuspeed.s (regdef.inc)
+PMMU.c (proto.h)
+pci_init.c (pci.h, proto.h)
+monitor.c (proto.h)
+vgaprint.c (proto.h)
+messages.c
+package.c (package.h, proto.h)
+inflate.c (package.h, proto.h)
+crc32.c (proto.h)
+nvram.c (proto.h)
+monitor2.s
+tos.s (regdef.inc)
+isabus.s (regdef.inc)
+memtest.s
+fontinit.s (regdef.inc,fontlogo.s,font8x16.s)
+initvga.c (proto.h)
+misc.c (proto.h)
+vgaemu\libvga.prj
+
+pcstdlib.lib
+;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
