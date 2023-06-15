@@ -1,3 +1,7 @@
+V1.04:
+  - ignore invalid interrupt line register values (as seen on 
+    some S3 video cards)
+    
 V1.03:
   - use IRQ 12 for Keyboard to fix "caps-lock hang"
   

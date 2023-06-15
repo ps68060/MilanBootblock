@@ -1,10 +1,7 @@
 ;****************************************************************************
-; $Id: startup.s,v 1.31 2004/01/18 16:46:58 rincewind Exp $
+; $Id: startup.s,v 1.30 2003/12/28 22:14:02 rincewind Exp $
 ;****************************************************************************
 ; $Log: startup.s,v $
-; Revision 1.31  2004/01/18 16:46:58  rincewind
-; - set version 1.03
-;
 ; Revision 1.30  2003/12/28 22:14:02  rincewind
 ; - fix CVS headers
 ;
@@ -65,7 +62,7 @@ version_text:
 ;           dc.b    $0F, "Bootblock V"
             dc.b    $01,$0F, "Bootblock V"
 bb_version:
-            dc.b    "1.03",0
+            dc.b    "1.04",0
             align   4
 
 warmstart:

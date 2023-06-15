@@ -1,10 +1,7 @@
 ;****************************************************************************
-; $Id: isabus.s,v 1.12 2004/01/18 16:46:22 rincewind Exp $
+; $Id: isabus.s,v 1.11 2003/12/28 22:14:01 rincewind Exp $
 ;****************************************************************************
 ; $Log: isabus.s,v $
-; Revision 1.12  2004/01/18 16:46:22  rincewind
-; - set KBD and MOUSE to interrupt 12
-;
 ; Revision 1.11  2003/12/28 22:14:01  rincewind
 ; - fix CVS headers
 ;

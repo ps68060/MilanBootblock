@@ -337,7 +337,8 @@ static void do_config(int bus, int dev, int fct, ULONG id)
 
     tmp = pci_read_config(bus, dev, fct, PCI_INTERRUPT_LINE);
     x = (int)((tmp>>8) & 0xff);
-    if (x)
+    /*mprintf("Dev %d, INT %d\r\n", dev, x);*/
+    if (x>=1 && x <= 4)
       cur_device->pci_interrupt = interrupt_table[dev][x-1];
     else
       cur_device->pci_interrupt = 0;
